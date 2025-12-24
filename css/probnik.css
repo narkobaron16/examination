@@ -1,0 +1,36 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-menu {
+    position: absolute;
+    bottom: 10px; /* отступ снизу */
+    left: 50%;    /* ставим в центр по горизонтали */
+    transform: translateX(-50%); /* центрируем по середине */
+    width: 50%;   /* ширина блока с меню, не на всю картинку */
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-around; /* равномерно распределяем ссылки */
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.image-container:hover .overlay-menu {
+    opacity: 1;                  /* показываем при наведении */
+}
+
+.overlay-menu a {
+    margin: 0 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
